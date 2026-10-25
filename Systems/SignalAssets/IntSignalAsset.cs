@@ -2,5 +2,5 @@
 
 namespace Utility {
     [CreateAssetMenu(fileName = "IntSignal", menuName = "DoctorRon/Unity Utils/Signals/Int Signal")]
-    public class IntSignalAsset : SignalAsset<int> { }
+    public class IntSignalAsset : SignalAsset<int>, ISignal<int> { }
 }

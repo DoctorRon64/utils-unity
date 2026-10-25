@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Utility {
-    public abstract class DoubleDataSignalAsset<T, TU> : DataAsset {
+    public abstract class DoubleDataSignalAsset<T, TU> : DataAsset, ISignal<T, TU> {
         private readonly Signal<T, TU> m_signal = new();
 
         public void AddListener(Action<T, TU> _callback) => m_signal.AddListener(_callback);
