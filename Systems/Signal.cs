@@ -75,7 +75,7 @@ namespace Utility {
         }
     }
     
-    public class Signal : SignalBase {
+    public class Signal : SignalBase, ISignal {
         public void AddListener(Action _callback) {
             Register(_callback);
         }
@@ -98,7 +98,7 @@ namespace Utility {
         public void Invoke(object _sender, T _arg) => Invoke(_listener => ((EventHandler<T>)_listener).Invoke(_sender, _arg));
     }
 
-    public sealed class Signal<T> : SignalBase {
+    public sealed class Signal<T> : SignalBase, ISignal<T> {
         public void AddListener(Action<T> _callback) => Register(_callback);
         public void RemoveListener(Action<T> _callback) => Unregister(_callback);
         public SignalSubscription Subscribe(Action<T> _callback) {
@@ -108,7 +108,7 @@ namespace Utility {
         public void Invoke(T _arg) => Invoke(_listener => ((Action<T>)_listener).Invoke(_arg));
     }
 
-    public class Signal<T, U> : SignalBase {
+    public class Signal<T, U> : SignalBase, ISignal<T, U> {
         public void AddListener(Action<T, U> _callback) {
             Register(_callback);
         }
