@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
 namespace Utility {
-    [CreateAssetMenu(fileName = "DoubleIntSignal", menuName = "DoctorRon/Unity Utils/Signals/Double Int Signal")]
+    [CreateAssetMenu(menuName = FileStructure.SignalFolder + nameof(DoubleIntSignalAsset))]
     public class DoubleIntSignalAsset : DoubleDataSignalAsset<int, int>, ISignal<int, int> { }
 }

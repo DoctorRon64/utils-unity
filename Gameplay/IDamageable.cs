@@ -4,10 +4,10 @@
         Opponent,
     }
     
-    public interface IDamagable {
+    public interface IDamageable {
         DamagableTeam team { get; }
 
-        int health { get; set; }
-        void TakeDamage(int damageAmount);
+        float health { get; set; }
+        void TakeDamage(float damageAmount);
     }
 }

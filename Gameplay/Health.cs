@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 
 namespace Utility {
-    public class Health : MonoBehaviour, IDamagable {
-        [SerializeField] private int m_maxHealth = 100;
-        [SerializeField] private DoubleIntSignalAsset m_healthChanged;
+    public class Health : MonoBehaviour, IDamageable {
+        [SerializeField] private float m_maxHealth = 100;
+        [SerializeField] private DoubleFloatSignalAsset m_healthChanged;
         [SerializeField] private MonoSignalAsset m_onDeath;
         [field: SerializeField] public DamagableTeam team { get; private set; }
-        private int m_health;
+        private float m_health;
         private bool m_isDead;
 
-        public int health {
+        public float health {
             get => m_health;
             set {
                 m_health = Mathf.Clamp(value, 0, m_maxHealth);
@@ -29,7 +29,7 @@ namespace Utility {
             health = m_maxHealth;
         }
 
-        public virtual void TakeDamage(int _damageAmount) {
+        public virtual void TakeDamage(float _damageAmount) {
             health -= _damageAmount;
         }
 

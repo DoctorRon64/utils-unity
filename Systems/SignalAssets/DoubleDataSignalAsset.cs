@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Utility {
     public abstract class DoubleDataSignalAsset<T, TU> : DataAsset, ISignal<T, TU> {

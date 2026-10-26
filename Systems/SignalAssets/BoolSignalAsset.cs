@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
 namespace Utility {
-    [CreateAssetMenu(fileName = "BoolSignal", menuName = "DoctorRon/Unity Utils/Signals/Bool Signal")]
+    [CreateAssetMenu(menuName = FileStructure.SignalFolder + nameof(BoolSignalAsset))]
     public class BoolSignalAsset : SignalAsset<bool>, ISignal<bool> { }
 }

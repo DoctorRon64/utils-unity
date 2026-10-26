@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 
 namespace Utility {
-    [CreateAssetMenu(fileName = "Signal", menuName = "DoctorRon/Unity Utils/Signals/Signal")]
+    [CreateAssetMenu(menuName = FileStructure.SignalFolder + "Signal")]
     public class MonoSignalAsset : SignalAsset, ISignal { }
+
+
 }
+
+
